@@ -13,10 +13,10 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      - "MYSQL_USER=misp"
-      - "MYSQL_PASSWORD=example"
-      - "MYSQL_ROOT_PASSWORD=password"
-      - "MYSQL_DATABASE=misp"
+      - "MYSQL_USER=Std_Brazil"
+      - "MYSQL_PASSWORD=LogSTDT3sT3!"
+      - "MYSQL_ROOT_PASSWORD=LogSTDT3sT3!"
+      - "MYSQL_DATABASE=Std_Brazil"
     volumes:
       - mysql_data:/var/lib/mysql
     cap_add:
@@ -37,7 +37,7 @@ services:
       - "./ssl/:/etc/nginx/certs"
 #      - "./examples/custom-entrypoint.sh:/custom-entrypoint.sh" # Use the example custom-entrypoint.sh
     environment:
-      - "BASEURL=https://localhost"
+      - "BASEURL="
       - "REDIS_FQDN=redis"
       - "INIT=true"             # Initialze MISP, things includes, attempting to import SQL and the Files DIR
       - "CRON_USER_ID=1"        # The MISP user ID to run cron jobs as
