@@ -189,4 +189,6 @@ ARG PHP_VER
     ENTRYPOINT [ "/entrypoint.sh" ]
 
 # Change Workdirectory
-    WORKDIR /var/www/MISP
+    WORKDIR /var/www/MISP]
+# Defina a variável de ambiente com um valor padrão
+    ENV MINHA_VARIAVEL_DE_AMBIENTE=valor_padrao
